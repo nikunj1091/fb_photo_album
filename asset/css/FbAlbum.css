@@ -1,0 +1,58 @@
+div
+{
+    display: block;
+}
+.main
+{
+    margin-top: 5% !important;
+    height: 100%
+}
+.menu
+{
+    margin-bottom: 50px;
+}
+.block
+{
+    border: 1px solid #CCC;
+    background: none repeat scroll 0% 0% #FFF;
+    margin: 1em 0em;
+}
+.block-body {
+    margin: 1em;
+    min-height: 0.25em;
+}
+.gallery {
+    text-align: center;
+}
+
+.profile
+{
+    border: 1px solid #CCC;
+    height: 60%;
+}
+.profile2
+{
+    background-color: #123456;
+    height: 50%;
+}
+.profile3
+{
+    vertical-align: bottom;
+    background-color: #fff;
+    height: 50%;
+}
+.profileImage
+{
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
+    text-align: center;
+    //color: #ccc;
+    font-weight: bold;
+    font-size: larger;
+}
+.imgfbconnect
+{
+    margin-left: 15%;
+}
