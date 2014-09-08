@@ -16,7 +16,7 @@ use Facebook\GraphObject;
 use Facebook\GraphSessionInfo;
 FacebookSession::setDefaultApplication('1441679196091390', '3ffd92469c7d6e15dc86db6a695fee95');
 //FacebookSession::setDefaultApplication('333190363521048', '64e0596fa72ef6478cfa6d3a8e3a484e');
-$helper = new FacebookRedirectLoginHelper('http://localhost/FacebookPhotoAlbum/userhome.php');
+$helper = new FacebookRedirectLoginHelper('http://fbphotoalbum-rtcampapp.rhcloud.com/userhome.php';);
 try {
     $session = $helper->getSessionFromRedirect();
 } catch (Exception $ex) {

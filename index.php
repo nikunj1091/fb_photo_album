@@ -1,7 +1,7 @@
 <?php
 //require_once 'login.php';
 session_start();
-$url='http://localhost/FacebookPhotoAlbum/userhome.php';
+$url='http://fbphotoalbum-rtcampapp.rhcloud.com/userhome.php';
 if(isset($_SESSION['token']))
 {
     header('Location: ' . $url, true, $permanent ? 301 : 302);
