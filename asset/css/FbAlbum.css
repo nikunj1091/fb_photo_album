@@ -30,12 +30,12 @@ div
     border: 1px solid #CCC;
     height: 60%;
 }
-.profile2
+.profile_bg1
 {
     background-color: #123456;
     height: 50%;
 }
-.profile3
+.profile_bg2
 {
     vertical-align: bottom;
     background-color: #fff;
@@ -52,6 +52,8 @@ div
     font-weight: bold;
     font-size: larger;
 }
+
+
 .imgfbconnect
 {
     margin-left: 15%;
