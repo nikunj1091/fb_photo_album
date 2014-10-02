@@ -21,8 +21,8 @@ class FacebookPhotoAlbum {
 		$this->permissions = array( 'user_photos' );
 		$this->app_id      = '209721652515800';
 		$this->app_secret  = '6d4dc86a9b34d4a9ef23299b47ef24b1';
-		$this->redirectUrl = 'http://localhost/FacebookPhotoAlbum/userhome.php';
-		$this->logoutUrl   = 'http://localhost/FacebookPhotoAlbum/logout.php';
+		$this->redirectUrl = 'http://fbphotoalbum-rtcampapp.rhcloud.com/userhome.php';
+		$this->logoutUrl   = 'http://fbphotoalbum-rtcampapp.rhcloud.com/logout.php';
 		// Initialize the SDK
 		FacebookSession::setDefaultApplication( $this->app_id, $this->app_secret );
 
