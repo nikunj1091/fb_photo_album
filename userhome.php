@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'FacebookPhotoAlbum.php';
+require_once 'facebookphotoalbum.php';
 
 $userAlbum = new FacebookPhotoAlbum();
 if ( ! isset( $userAlbum->session ) ) {

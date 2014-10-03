@@ -3,7 +3,7 @@
     Download one or more album according to user requested
    */
 session_start();
-require_once 'FacebookPhotoAlbum.php';
+require_once 'facebookphotoalbum.php';
 $obj    = new FacebookPhotoAlbum();
 $albums = $_REQUEST['Selected'];
 $userid = $_SESSION['userid'];

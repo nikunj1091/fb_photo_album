@@ -3,7 +3,7 @@
     Start Slideshow showing photos in that album in full-screen mode.
   */
 session_start();
-require_once 'FacebookPhotoAlbum.php';
+require_once 'facebookphotoalbum.php';
 $obj = new FacebookPhotoAlbum();
 if ( ! isset( $obj->session ) ) {
 	header( 'Location : index.php', true, $permanent ? 301 : 302 );
