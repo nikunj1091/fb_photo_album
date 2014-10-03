@@ -4,5 +4,5 @@ session_start();
 //to completely destroy sesion
 session_destroy();
 // redirect user to login page
-header( 'Location : index.php', true, $permanent ? 301 : 302 );
+header( 'Location : index.php' );
 ?>

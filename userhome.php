@@ -4,8 +4,8 @@ require_once 'facebookphotoalbum.php';
 
 $userAlbum = new FacebookPhotoAlbum();
 if ( ! isset( $userAlbum->session ) ) {
-	header( 'Location : index.php', true, $permanent ? 301 : 302 );
-}
+	header( 'Location: index.php' );
+	}
 $logoutURL = $userAlbum->logout_url();
 $userinfo  = $userAlbum->get_user_info();
 $url       = $userAlbum->get_user_profile_picture();

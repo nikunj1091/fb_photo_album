@@ -6,7 +6,7 @@ session_start();
 require_once 'facebookphotoalbum.php';
 $obj = new FacebookPhotoAlbum();
 if ( ! isset( $obj->session ) ) {
-	header( 'Location : index.php', true, $permanent ? 301 : 302 );
+	header( 'Location : index.php' );
 }
 $photos = $obj->get_album_photos( $_REQUEST['albumId'] );
 ?>

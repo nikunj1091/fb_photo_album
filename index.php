@@ -3,7 +3,7 @@ session_start();
 require_once 'facebookphotoalbum.php';
 $loginObj = new FacebookPhotoAlbum();
 if ( isset( $loginObj->session ) ) {
-	header( 'Location : userhome.php', true, $permanent ? 301 : 302 );
+	header( 'Location : userhome.php' );
 }
 ?>
 <!DOCTYPE html>
