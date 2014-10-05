@@ -1,21 +1,28 @@
 <?php
 session_start();
 require_once 'facebookphotoalbum.php';
-
+//Create class Object
 $userAlbum = new FacebookPhotoAlbum();
+//Redirect user if not logged in
 if ( ! isset( $userAlbum->session ) ) {
 	header( 'Location: index.php' );
 	}
+//Get logout url
 $logoutURL = $userAlbum->logout_url();
+//Get user info
 $userinfo  = $userAlbum->get_user_info();
+//Get user profile picture url
 $url       = $userAlbum->get_user_profile_picture();
+//Get user album list
 $albums    = $userAlbum->get_user_album();
+//Store user id in session variable
 if ( isset( $userinfo ) ) {
 	$_SESSION['userid'] = $userinfo[0]['userid'];
 }
 ?>
 <html>
 <head>
+	<title>Facebook Photo Album</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="asset/js/jquery.js"></script>
 	<link href="asset/css/bootstrap.css" rel="stylesheet" type="text/css"/>

@@ -1,9 +1,11 @@
 <?php
 session_start();
 require_once 'facebookphotoalbum.php';
+//Create class object
 $loginObj = new FacebookPhotoAlbum();
+//Redirect user if already logged in
 if ( isset( $loginObj->session ) ) {
-	header( 'Location : userhome.php' );
+	header( 'Location: userhome.php' );
 }
 ?>
 <!DOCTYPE html>
@@ -24,11 +26,6 @@ if ( isset( $loginObj->session ) ) {
 	<div class="panel panel-default">
 		<div class="panel-heading"><h4>Facebook Photo Albums</h4></div>
 		<div class="panel-body">
-			<!----login link -->
-			<!--                                esc_url : url
-											esc_attr(): values
-											esc_html()
-											balance_tag()-->
 			<img src="asset/img/facebook-album-Icon.png"
 			     width="35%"/><?php echo "<a class='imgfbconnect' href='" . $loginObj->login_url() . "'><img   src='asset/img/fbconnect.png' width='40%' /></a>"; ?>
 		</div>

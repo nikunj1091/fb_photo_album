@@ -205,7 +205,7 @@ class FacebookPhotoAlbum {
 			//Array of photos inside album
 			$photos = $photo_graphObject->asArray( 'data' );
 
-			// Get response as an userid
+			// Get response as an array of photos which returned by API request
 			return $photos;
 		}
 	}

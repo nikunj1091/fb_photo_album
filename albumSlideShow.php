@@ -4,10 +4,13 @@
   */
 session_start();
 require_once 'facebookphotoalbum.php';
+//create class object
 $obj = new FacebookPhotoAlbum();
+//To redirect user if not logged in
 if ( ! isset( $obj->session ) ) {
-	header( 'Location : index.php' );
+	header( 'Location: index.php' );
 }
+// get album photos 
 $photos = $obj->get_album_photos( $_REQUEST['albumId'] );
 ?>
 <!DOCTYPE html>
@@ -48,7 +51,9 @@ $photos = $obj->get_album_photos( $_REQUEST['albumId'] );
 <div id="Gallery">
 
 	<?php
+	
 if ( ! empty( $photos ) ) {
+//Loop through all photos
  foreach ( $photos['data'] as $photo ) {
 			echo "<a href='{$photo->source}'><img src='{$photo->source}' /></a>";
 		}
