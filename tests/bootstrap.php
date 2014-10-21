@@ -1,5 +1,15 @@
 <?php
+
 session_start();
-require_once '../lib/sdk/autoload.php';
-require_once '../facebookphotoalbum.php';
+
+function loader($class)
+{
+
+    $file = strtolower($class) . '.php';
+    if (file_exists($file)) {
+        require $file;
+    }
+}
+
+spl_autoload_register('loader');
 ?>
