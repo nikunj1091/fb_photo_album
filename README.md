@@ -1,4 +1,4 @@
-## Facebook Photo Album
+## Facebook Photo Album [![Build Status](https://travis-ci.org/nikunj1091/fb_photo_album.svg)](https://travis-ci.org/nikunj1091/fb_photo_album)
 Facebook Photo Album is web application which allow users to view their facebook album list, photos inside album and also download them.
 
 ### Contributor : [Nikunj Vagadiya](https://github.com/nikunj1091/)
@@ -21,6 +21,6 @@ Facebook Photo Album is web application which allow users to view their facebook
 * [Bootstrap](http://getbootstrap.com/) - Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web. 
 * [Photoswipe](https://github.com/dimsemenov/PhotoSwipe) - PhotoSwipe is a FREE HTML/CSS/JavaScript based image gallery specifically targeting mobile devices.
 
-##Demo Link
+##Demo Link [![Build Status](https://travis-ci.org/nikunj1091/fb_photo_album.svg)](https://travis-ci.org/nikunj1091/fb_photo_album)
 
  [Facebook Photo Album](http://fbphotoalbum-rtcampapp.rhcloud.com/).
