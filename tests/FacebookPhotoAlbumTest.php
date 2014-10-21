@@ -41,7 +41,12 @@ class FacebookPhotoAlbumTest extends PHPUnit_Framework_TestCase {
 		$this->assertEquals( 'Nikunj Vagadiya', $testArray[0]['username'] );
 
 	}
-	
+	//Ensure get user profile picture return url of user profile picture 
+	public function test_get_user_profile_picture() {
+		$testurl = $this->object->get_user_profile_picture();
+		$this->assertNotEmpty( $testurl );
+		$this->assertEquals( 'https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/v/t1.0-1/c46.46.572.572/s200x200/3498_439459886116353_502076372_n.jpg?oh=c996e33200dacf69391036ef87613045&oe=54CC5E5A&__gda__=1422109585_43906044640e4be66fead779cbc519e0', $testurl );
+	}
 
 	//Ensure get user album  return array of album
 	public function test_get_user_album() {
