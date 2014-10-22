@@ -35,9 +35,15 @@ $photos = $obj->get_album_photos( $_REQUEST['albumId'] );
 		document.addEventListener('DOMContentLoaded', function () {
 
 			// Set up PhotoSwipe, setting "preventHide: true"
-			var thumbEls = Code.photoSwipe('a', '#Gallery', {preventHide: true, autoStartSlideshow: true});
-
+			var thumbEls = Code.photoSwipe('a', '#Gallery', {autoStartSlideshow: true});
+			
 			Code.PhotoSwipe.Current.show(0);
+			Code.PhotoSwipe.Current.addEventListener(Code.PhotoSwipe.EventTypes.onSlideshowStop, function(e){
+				
+				window.location="http://fbphotoalbum-rtcampapp.rhcloud.com/userhome.php";
+				
+			});
+			
 
 		}, true);
 
