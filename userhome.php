@@ -216,7 +216,7 @@ if ( ! empty( $albums ) ) {
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h3>Sorry Something went wrong, please try again.......</h3>
+				<h3>Sorry Something went wrong because of slow network, please try again.......</h3>
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 			</div>
 		</div>
