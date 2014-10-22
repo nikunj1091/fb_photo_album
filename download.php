@@ -5,6 +5,7 @@
 session_start();
 require_once 'facebookphotoalbum.php';
 $obj    = new FacebookPhotoAlbum();
+$albums = array();
 //retrieve array of albumid from requests
 $received_array = $_REQUEST['Selected'];
 	foreach($received_array as $val)
