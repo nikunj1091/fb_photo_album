@@ -6,6 +6,7 @@ use Facebook\FacebookRedirectLoginHelper;
 use Facebook\FacebookSession;
 use Facebook\FacebookRequest;
 use Facebook\FacebookAuthorizationException;
+use Facebook\FacebookRequestException;
 
 class FacebookPhotoAlbum {
 
@@ -69,7 +70,9 @@ class FacebookPhotoAlbum {
 	 */
 
 	public function logout_url() {
-		return $this->helper->getLogoutUrl( $this->session, $this->logoutUrl );
+		if ( $this->session ) {
+			return $this->helper->getLogoutUrl( $this->session, $this->logoutUrl );
+			}
 	}
 
 	/**
@@ -81,6 +84,7 @@ class FacebookPhotoAlbum {
 			/**
 			 * Retrieve User’s Profile Information
 			 */
+			 $userinfo=array();
 			// Graph API to request user data
 			$user_profile             = new FacebookRequest( $this->session, 'GET', '/me' );
 			$profile_response         = $user_profile->execute();
