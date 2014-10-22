@@ -162,18 +162,18 @@ class FacebookPhotoAlbum {
 		return false;
 	}
 
-	public function make_zip( $arr_albumId, $userid ) {
+	public function make_zip( $arr_album, $userid ) {
 		if ( $this->session ) {
-
 			try {
 				$fname = $userid . '.zip';
 				$zip   = new ZipArchive;
 				$zip->open( $fname, ZipArchive::CREATE | ZIPARCHIVE::OVERWRITE );
 				//Array of id of album that user requested for download
 				//Loop through all album id which user requested for
-				foreach ( $arr_albumId as $albumId ) {
+				foreach ( $arr_album as $album ) {
 					//Make facebook request for get all photos within album
-					$getPhotoRequest  = new FacebookRequest( $this->session, 'GET', '/' . $albumId . '/photos' );
+					ini_set( 'max_execution_time', 1000 );
+					$getPhotoRequest  = new FacebookRequest( $this->session, 'GET', '/' . $album[0] . '/photos' );
 					$getPhotoresponse = $getPhotoRequest->execute();
 					$photo_graphObj   = $getPhotoresponse->getGraphObject();
 					$photolist        = $photo_graphObj->asArray( 'data' );
@@ -182,7 +182,7 @@ class FacebookPhotoAlbum {
 						//Loop throughout all photos inside album
 						foreach ( $photolist['data'] as $photo ) {
 							//Add photo of album in to zip file
-							$zip->addFromString( $albumId . '/' . basename( $photo->source ), file_get_contents( $photo->source ) );
+							$zip->addFromString( $album[1] . '/' . basename( $photo->source ), file_get_contents( $photo->source ) );
 						}
 					}
 				}

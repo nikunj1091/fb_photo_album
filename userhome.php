@@ -74,6 +74,7 @@ if ( isset( $userinfo ) ) {
 						});
 					}
 					else {
+						
 						$('#waitModal').modal('hide');
 						$('#errorModal').modal('show');
 
@@ -153,8 +154,8 @@ if ( ! empty( $albums ) ) {
 									<h4><?php echo $album['albumName'] ?></h4>
 
 									<p>
-										<?php echo "<input type='checkbox' name='cb' value='" . $album['albumId'] . "'/>  "; ?>
-										<button type="button" id="single" value="<?php echo $album['albumId']; ?>"
+										<?php echo "<input type='checkbox' name='cb' value='" . $album['albumId'] ."-".$album['albumName']. "'/>  "; ?>
+										<button type="button" id="single" value="<?php echo $album['albumId']."-".$album['albumName']; ?>"
 										        class="btn btn-primary">Download This Album
 										</button>
 									</p>
