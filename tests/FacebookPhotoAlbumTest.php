@@ -56,9 +56,9 @@ class FacebookPhotoAlbumTest extends PHPUnit_Framework_TestCase {
 	}
 	//Ensure make zip return zip file name
 	public function test_make_zip() {
-		$albumid[0] = '106444206084591';
+		$album[] = array( '106444206084591', 'Profile Pictures' );
 		$userid     = '100001570371568';
-		$testzip    = $this->object->make_zip( $albumid, $userid );
+		$testzip    = $this->object->make_zip( $album, $userid );
 		$this->assertNotEmpty( $testzip );
 		$this->assertContains( 'zip', $testzip );
 	}
