@@ -7,3 +7,6 @@ tools:
 filter:
     excluded_paths:
         - lib/*    
+build:
+    environment:
+        php: '5.4'		
