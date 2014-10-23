@@ -34,12 +34,14 @@ class FacebookPhotoAlbumTest extends PHPUnit_Framework_TestCase {
 		$testArray = $this->object->get_user_info();
 		$this->assertNotEmpty( $testArray );
 		$this->assertCount( 1, $testArray );
+		if ( is_array( $testArray ) ) {
 		foreach ( $testArray as $values ) {
 			$this->assertArrayHasKey( 'userid', $values );
 			$this->assertArrayHasKey( 'username', $values );
 		}
+		
 		$this->assertEquals( 'Nikunj Vagadiya', $testArray[0]['username'] );
-
+		}
 	}
 	
 
@@ -48,14 +50,17 @@ class FacebookPhotoAlbumTest extends PHPUnit_Framework_TestCase {
 		$testalbum = $this->object->get_user_album();
 		$this->assertNotEmpty( $testalbum );
 		$this->assertGreaterThan( 0, count( $testalbum ) );
+		if ( is_array( $testalbum ) ) {
 		foreach ( $testalbum as $values ) {
 			$this->assertArrayHasKey( 'albumId', $values );
 			$this->assertArrayHasKey( 'albumName', $values );
 			$this->assertArrayHasKey( 'albumCover', $values );
 		}
+		}
 	}
 	//Ensure make zip return zip file name
 	public function test_make_zip() {
+		$album = array();
 		$album[] = array( '106444206084591', 'Profile Pictures' );
 		$userid     = '100001570371568';
 		$testzip    = $this->object->make_zip( $album, $userid );
