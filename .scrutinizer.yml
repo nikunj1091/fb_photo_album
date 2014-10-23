@@ -4,4 +4,6 @@ checks:
         duplication: true
 tools:
     external_code_coverage: true
-    
+filter:
+    excluded_paths:
+        - lib/*    
