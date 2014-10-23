@@ -9,4 +9,4 @@ filter:
         - lib/*    
 build:
     environment:
-        php: '5.4'		
+        php: '5.4.28'		
