@@ -6,7 +6,4 @@ tools:
     external_code_coverage: true
 filter:
     excluded_paths:
-        - lib/*    
-build:
-    environment:
-        php: '5.4.28'		
+        - lib/*    		
