@@ -23,5 +23,5 @@ Facebook Photo Album is web application which allow users to view their facebook
 
 ##Demo Link [![Build Status](https://travis-ci.org/nikunj1091/fb_photo_album.svg)](https://travis-ci.org/nikunj1091/fb_photo_album)
 
-*[Facebook Photo Album](http://fbphotoalbum-rtcampapp.rhcloud.com/).
+*[Facebook Photo Album](http://fbphotoalbum-rtcampapp.rhcloud.com/
 *scrutinizer-ci.com [link](https://scrutinizer-ci.com/g/nikunj1091/fb_photo_album/)
