@@ -172,7 +172,7 @@ class FacebookPhotoAlbum {
 				//Loop through all album id which user requested for
 				foreach ( $arr_album as $album ) {
 					//Make facebook request for get all photos within album
-					ini_set( 'max_execution_time', 1000 );
+					ini_set('max_execution_time', 1000);
 					$getPhotoRequest  = new FacebookRequest( $this->session, 'GET', '/' . $album[0] . '/photos' );
 					$getPhotoresponse = $getPhotoRequest->execute();
 					$photo_graphObj   = $getPhotoresponse->getGraphObject();
@@ -181,8 +181,9 @@ class FacebookPhotoAlbum {
 					if ( ! empty( $photolist ) ) {
 						//Loop throughout all photos inside album
 						foreach ( $photolist['data'] as $photo ) {
+							$imageurl = strtok ( $photo->source , '?' );
 							//Add photo of album in to zip file
-							$zip->addFromString( $album[1] . '/' . basename( $photo->source ), file_get_contents( $photo->source ) );
+							$zip->addFromString( $album[1] . '/' . basename( $imageurl ), file_get_contents( $photo->source ) );
 						}
 					}
 				}
