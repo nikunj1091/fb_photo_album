@@ -38,14 +38,14 @@ class FacebookPhotoAlbum {
 				if ( ! $this->session->Validate( $this->app_id, $this->app_secret ) ) {
 					$this->session = null;
 				}
-			} catch ( FacebookAuthorizationException $e ) {
+			} catch ( Exception $e ) {
 				$this->session = null;
 			}
 		} else {
 			//When No session exists
 			try {
 				$this->session = $this->helper->getSessionFromRedirect();
-			} catch ( FacebookRequestException $ex ) {
+			} catch ( Exception $ex ) {
 				// When Facebook returns an error
 			} catch ( Exception $ex ) {
 				// When validation fails or other local issues
